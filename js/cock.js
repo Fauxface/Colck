@@ -60,14 +60,14 @@ function setClock(date) {
     var minutes = date.getMinutes();
     var hours = date.getHours();
 
-    $("#hours").text(pad(hours));
-    $("#minutes").text(pad(minutes));
+    $("#hours").text(pad(hours, 2));
+    $("#minutes").text(pad(minutes, 2));
     // $("#seconds").text(pad(seconds));
 }
 
-function pad(number) {
-    if ((number+"").length < 2)
-        return "0" + number;
-    else
+function pad(number, length) {
+    if ((number+"").length >= length)
         return number;
+    else
+        return pad("0" + number, length);
 }
