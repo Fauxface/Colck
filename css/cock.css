@@ -1,0 +1,45 @@
+/* clock.css */
+
+body {
+    background-color: #888;
+    transition: background-color 0.66s;
+    -moz-transition: background-color 0.66s; /* Firefox 4 */
+    -webkit-transition: background-color 0.66s; /* Safari and Chrome */
+    -o-transition: background-color 0.66s; /* Opera */
+}
+
+#clock {
+    display: table;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    font-family: 'Raleway', 'Verdana', 'Arial', sans-serif;
+    font-size: 280px;
+    color: #fff;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+.clockDigits {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#hours {
+    text-align: right;
+}
+
+#minutes {
+    text-align: left;
+}
+
+#seconds {
+    padding-left: 10px;
+    font-size: 96px;
+}
+
