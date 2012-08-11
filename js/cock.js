@@ -26,7 +26,6 @@ function getTheMusic(i) {
                     "http://upload.wikimedia.org/wikipedia/commons/c/ce/Robert_Schumann_-_scenes_from_childhood%2C_op._15_-_i._of_foreign_lands_and_peoples.ogg" // Schumann - Of Foreign Lands And People
                     ];
     var i = Math.round(Math.random() * musicSrc.length);
-    console.log(i);
     var player = document.getElementById('music');
     player.src = musicSrc[i];
 }
@@ -38,7 +37,7 @@ function timeToHsv(date) {
 
     var h = (minutes / 60 * 360);
     var s = (seconds / 60 * 100) + "%";
-    var v = ((hours) / 24 * 100) + "%";
+    var v = ((100 - Math.abs(12 - (hours % 23)) / 12.0 * 70) - 20) + "%";
 
     return [h, s, v];
 }
