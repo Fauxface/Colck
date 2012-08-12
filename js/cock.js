@@ -14,6 +14,7 @@ $(document).ready(function() {
 
     $("#music").bind("ended", function() {
         getTheMusic();
+        this.play();
     });
 });
 
